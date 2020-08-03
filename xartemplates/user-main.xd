@@ -1,0 +1,58 @@
+<xar:if condition="$print">
+  <xar:comment>Just display a list of smilies in print view and let the css handle display</xar:comment>
+  <xar:style scope="module" module="smilies" file="print" />
+  <ul class="smilies-popup">
+      <xar:loop name="$items">
+        <li>
+        <a href="javascript:void(0);" onclick="window.opener.replaceText('&nbsp;#$loop:item['code']#&nbsp;', window.opener.document.forms.post.getElementsByTagName('textarea')[0]); window.focus(); return false;" title="#$loop:item.emotion#">
+          <img src="#xarTplGetImage($loop:item['icon'])#" alt="#$loop:item['emotion']#" title="#$loop:item['emotion']#" /> #$loop:item.code#
+        </a>
+        </li>
+      </xar:loop>
+  </ul>
+  <br class="xar-clearboth" />
+<xar:else />
+        <div class="xar-mod-page">
+            <div class="xar-mod-head">
+                <xar:if condition="!xarRequestIsAJAX()">
+                    <xar:template type="module" module="base" file="user-menu" />
+                </xar:if>
+            </div>
+            <div class="xar-mod-body">
+                <h1><xar:mlstring>Current smilies</xar:mlstring></h1>
+                <div class="xar-mod-content">
+                  <table class="xar-items">
+                    <tr>
+                        <th>
+                            <xar:mlstring>Smiley Code</xar:mlstring>
+                        </th>
+                        <th>
+                            <xar:mlstring>Smiley Icon</xar:mlstring>
+                        </th>
+                        <th>
+                            <xar:mlstring>Smiley Emotion</xar:mlstring>
+                        </th>
+                    </tr>
+                    <xar:set name="rowclass">'xar-norm'</xar:set>
+                    <xar:loop name="$items">
+                        <tr class="#$rowclass#">
+                            <td>
+                                #$loop:item['code']#
+                            </td>
+                            <td>
+                                <img src="#xarTplGetImage($loop:item['icon'])#" alt="#$loop:item['emotion']#" />
+                            </td>
+                            <td>
+                                #$loop:item['emotion']#
+                            </td>
+                        </tr>
+                         <xar:set name="rowclass">$rowclass == 'xar-norm' ? 'xar-alt' : 'xar-norm'</xar:set>
+                    </xar:loop>
+                </table>
+            </div>
+            #$pager#
+        </div>
+    </div>
+</xar:if>
+
+

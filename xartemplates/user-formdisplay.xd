@@ -1,0 +1,20 @@
+<xar:style module="smilies" file="smilies" scope="module" />
+<xar:base-include-javascript module="smilies" filename="smilies.js" position="head" />
+<xar:if condition="$settings['popupsmilies']">
+    <div class="smilies-inline">
+    <a href="#xarModURL('smilies','user','main',array('theme'=&gt;'print'))#"  onclick="smilies_popUp(this.href,'elastic',400,400);return false;" target="newWin" style="color: blue;" title="#xarML("click to select a smilie")#"><xar:mlstring>Select Smilies</xar:mlstring></a>
+    </div>
+<xar:else />
+    <div class="smilies-inline">
+     <ul>
+      <xar:loop name="$items">
+        <li >
+            <a href="javascript:void(0);" onclick="replaceText('&#160;#$loop:item['code']#', document.forms.post.getElementsByTagName('textarea')[0]); window.focus(); return false;">
+                <img src="#xarTplGetImage($loop:item['icon'],'smilies')#"  border="0" alt="#$loop:item.emotion#" title="#$loop:item.emotion#" />
+            </a>
+        </li>
+       </xar:loop>
+     </ul>
+     </div>
+     <br class="xar-clearboth;"/>
+</xar:if>

@@ -1,0 +1,96 @@
+<div class="xar-mod-page">
+    <div class="xar-mod-head">
+        <xar:if condition="!xarRequestIsAJAX()">
+            <xar:template type="module" module="base" file="admin-menu" />
+        </xar:if>
+    </div>
+    <div class="xar-mod-body">
+        <h1><xar:mlstring>Overview</xar:mlstring></h1>
+        <div class="xar-mod-content">
+        <img src="#xarTplGetImage('admin_generic.gif','base')#" class="xar-module-icon" alt="official icon" width="96" height="96" />
+                <h1>
+                    <xar:mlstring>What is it?</xar:mlstring>
+                </h1>
+                <p>
+                    <em><xar:mlstring>Smilies is an utility module</xar:mlstring></em>
+                    <xar:mlstring>It is currently responsible for accomplishing these tasks:</xar:mlstring>
+                    <xar:mlstring>The Smilies module will transform text that is using smilies code to images.</xar:mlstring>
+                </p>
+                <h2>
+                    <xar:mlstring>How to use it?</xar:mlstring>
+                </h2>
+                <p>
+                    <xar:mlstring>
+                    From the menu, you have three choices.  "Add Smilies", "View Smiles", and "Modify Config".
+                    </xar:mlstring>
+                </p>
+                <ol>
+                    <li><xar:mlstring><strong>Add Smilie</strong> -- Allows you to add new smilies to your system.</xar:mlstring></li>
+                    <li><xar:mlstring><strong>Manage Smilies</strong> -- Allows you to view the smilies that you have configured on your system.</xar:mlstring></li>
+                    <li><xar:mlstring><strong>Modify Config</strong> -- Allows you to change some of the key settings controlling the behaviour of the module</xar:mlstring>
+                      <ul>
+                        <li><xar:mlstring>Specify the number of smilies to display per page</xar:mlstring></li>
+                        <li>
+                          <p>
+                          <xar:mlstring>
+                            Specify HTML tags to ignore when transforming smiley code, useful for, eg, the bbcode [code] tags
+                          </xar:mlstring>
+                          </p>
+                          <p>
+                          <xar:mlstring>Accepts a comma delimited list of lowercase valid HTML tags.</xar:mlstring>
+                          </p>
+                        </li>
+                        <li><xar:mlstring>Optionally display all codes for each emotion on user main</xar:mlstring></li>
+                        <li>
+                          <xar:mlstring>Optionally specify a folder containing images to use for smilies</xar:mlstring>
+                          <p>
+                          <xar:mlstring>Folder must exist in one of the following folders (if the folder doesn't exist, or you leave this option empty, images will be served from these folders):</xar:mlstring>
+                          </p>
+                          <p>
+                          <xar:mlstring>In the module itself </xar:mlstring>
+                          <code>/modules/smilies/xarimages/</code>
+                          </p>
+                          <p>
+                          <xar:mlstring>Or when over-ridden by the theme in </xar:mlstring>
+                          <code>/themes/{current-theme-dir}/modules/smilies/images/</code>
+                          </p>
+                          <p>
+                          <xar:mlstring>Images must be named according to the Icon Path specified for each smilie configured on your system</xar:mlstring>
+                          </p>
+                        </li>
+                      </ul>
+                    </li>
+                </ol>
+                <h3>
+                    <xar:mlstring>Included Blocks</xar:mlstring>
+                </h3>
+                <ul>
+                    <li><xar:mlstring>smilies</xar:mlstring></li>
+                </ul>
+                <h3>
+                    <xar:mlstring>Included Hooks</xar:mlstring>
+                </h3>
+                <ul>
+                    <li><xar:mlstring>Smilies Transform Hook can be used on any content module that calls transforms.</xar:mlstring></li>
+                    <li><xar:mlstring>Similes Form Hooks can be used to display clickable smilies for insertion in text areas</xar:mlstring></li>
+                </ul>
+
+
+          <h3>
+            <xar:mlstring>Further Information</xar:mlstring>
+          </h3>
+          <p>
+            <xar:mlstring>Further information on the Smilies module can be found at</xar:mlstring>
+          </p>
+          <ul>
+            <li><xar:mlstring>Xarigami Smilies at</xar:mlstring> <a title="#xarML('Xarigami Smilies Module')#" href="http://xarigami.com/project/xarigami_smilies">Xarigami Smilies Project</a>.
+            </li>
+            <li><xar:mlstring>Related tutorials and documentation on Smilies found at</xar:mlstring> <a href="http://xarigami.com/resources" title="#xarML('Related documentation on Smilies')#"><xar:mlstring>Xarigami Resources.</xar:mlstring></a>
+            </li>
+          </ul>
+          <p class="xar-sub">
+            <strong>&nbsp;<xar:mlstring>Xarigami Smilies Module Overview</xar:mlstring></strong><br />&nbsp;<xar:mlstring>Revision</xar:mlstring> 1.1.0&#160; 2008-12-05
+          </p>
+        </div>
+    </div>
+</div>

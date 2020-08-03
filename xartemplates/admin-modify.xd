@@ -1,0 +1,68 @@
+<xar:comment> License: GPL http://www.gnu.org/copyleft/gpl.html </xar:comment>
+
+<xar:base-include-javascript module="base" filename="formcheck.js" />
+<script type="text/javascript">
+<!--
+    // Enter name of mandatory fields
+    var base_fieldRequired = Array("icon, emotion");
+    // Enter field description to appear in the dialog box
+    var base_fieldDescription = Array("Icon, Emotion");
+//-->
+</script>
+<div class="xar-mod-page">
+    <div class="xar-mod-head">
+        <xar:if condition="!xarRequestIsAJAX()">
+            <xar:template type="module" module="base" file="admin-menu" />
+        </xar:if>
+    </div>
+    <div class="xar-mod-body">
+        <h1><xar:mlstring>Modify Smilie</xar:mlstring></h1>
+        <div class="xar-mod-content">
+            <form  id="smilies-admin-modify" action="#xarModURL('smilies', 'admin', 'modify', array('phase' => 'update'))#" method="post" enctype="application/x-www-form-urlencoded">
+                <fieldset>
+                    <legend>
+                        <xar:mlstring>Smiley Code</xar:mlstring>
+                    </legend>
+                    <div class="xar-form-input-wrapper">
+                        <label for="code" class="xar-form-label" title="#xarML('Code required to trigger a smiley')#">
+                                <xar:mlstring>
+                                    Code
+                                </xar:mlstring>
+                        </label>
+                        <input type="text" name="code" id="code" value="#$code#" size="10" maxlength="10" />
+                    </div>
+                    <div class="xar-form-input-wrapper">
+                        <label for="icon" class="xar-form-label" title="#xarML('Icon to use')#">
+                            <xar:mlstring>
+                                Icon
+                            </xar:mlstring>
+                        </label>
+                        <input type="text" name="icon" id="icon" value="#$icon#" size="30" maxlength="100" />
+                    </div>
+                    <div class="xar-form-input-wrapper">
+                        <label for="emotion" class="xar-form-label" title="#xarML('Emotion that is expressed')#">
+                                <xar:mlstring>
+                                    Emotion
+                                </xar:mlstring>
+                        </label>
+                        <input type="text" name="emotion" id="emotion" value="#$emotion#" size="30" maxlength="100" />
+                    </div>
+                    </fieldset>
+                    <div class="xar-form-input-wrapper">
+                    <xar:if condition="!empty($hooks)">
+                        <xar:foreach in="$hooks" key="$hookmodule">
+                            #$hooks[$hookmodule]#
+                        </xar:foreach>
+                    </xar:if>
+                    </div>
+                    <div class="xar-form-footers">
+                        <input type="hidden" name="authid" id="authid" value="#$authid#" />
+                        <input type="hidden" name="sid" id="sid" value="#$sid#" />
+
+                        <input type="submit" value="#xarML('Submit')#" />
+                    </div>
+
+            </form>
+        </div>
+    </div>
+</div>

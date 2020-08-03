@@ -1,0 +1,33 @@
+<div class="xar-mod-page">
+    <div class="xar-mod-head">
+        <xar:if condition="!xarRequestIsAJAX()">
+            <xar:template type="module" module="base" file="admin-menu" />
+        </xar:if>
+    </div>
+    <div class="xar-mod-body">
+        <h1><xar:mlstring>Delete a smilie</xar:mlstring></h1>
+        <div class="xar-mod-content">
+            <form method="post" action="#xarModURL('smilies', 'admin', 'delete')#"  enctype="application/x-www-form-urlencoded">
+                <fieldset>
+                    <legend>
+                        <xar:mlstring>
+                             Deletion Confirmation
+                        </xar:mlstring>
+                    </legend>
+                </fieldset>
+                    <div class="xar-form-footer">
+                    <input type="hidden" name="authid" id="authid" value="#$authid#" />
+                    <input type="hidden" name="sid" id="sid" value="#$sid#" />
+                    <input type="hidden" name="confirm" id="confirm" value="1" />
+                    <input type="hidden" name="confirmation" id="confirmation" value="1" />
+                    <label for="code" class="xar-form-label" title="#xarML('Confirm deletion of smiley')#">
+                        <xar:mlstring>Confirm deletion of smiley</xar:mlstring>
+                    </label>
+                    <input type="submit" value="#xarML('Confirm')#" tabindex="1" />
+                    <a href="#xarModURL('smilies', 'admin', 'view')#"> &#160;<xar:mlstring>Cancel deletion of smiley</xar:mlstring></a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

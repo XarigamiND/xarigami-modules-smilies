@@ -1,0 +1,4 @@
+Xaraya Utility module written by Jim McDonald
+Smilies and smiley transform language taken from phpBB (www.phpbb.com)
+Form hooks based on pnBBCode Hook from larsneo http://www.pncommunity.de
+Xarigami enhancements by 2skies.com

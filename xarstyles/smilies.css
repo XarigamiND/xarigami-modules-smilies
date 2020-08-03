@@ -1,0 +1,43 @@
+
+dl.smilies-quote {
+	margin: 1em 10%;
+}
+dl.smilies-quote dt {
+	display: inline;
+	position: relative;
+	padding: 0 0.4em;
+	left: 0.5em;
+	top: 0.6em;
+	background-color: #fff;
+	font-weight: bold;
+	list-style-type: none;
+	border: 1px solid #ddf;
+}
+dl.smilies-quote dd {
+	margin-left: 0;
+}
+dl.smilies-quote dd blockquote {
+	padding: 1em;
+	border: 3px double #ddf;
+	margin: 0 13px 0 0;
+}
+
+div.smilies-inline {
+    border:1px #000; 
+    padding: .25em .25em 0 .25em; 
+    margin:0;
+}
+
+div.smilies-inline ul {
+    list-style-type:none; 
+    display:block; 
+    padding-top:3px; 
+    margin:0; 
+}
+div.smilies-inline ul li {
+list-style-type:none;
+display:inline; 
+padding:1px; 
+margin:0; 
+width:auto;
+}
