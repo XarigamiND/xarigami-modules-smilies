@@ -79,14 +79,9 @@
           <h3>
             <xar:mlstring>Further Information</xar:mlstring>
           </h3>
-          <p>
-            <xar:mlstring>Further information on the Smilies module can be found at</xar:mlstring>
-          </p>
           <ul>
-            <li><xar:mlstring>Xarigami Smilies at</xar:mlstring> <a title="#xarML('Xarigami Smilies Module')#" href="http://xarigami.com/project/xarigami_smilies">Xarigami Smilies Project</a>.
-            </li>
-            <li><xar:mlstring>Related tutorials and documentation on Smilies found at</xar:mlstring> <a href="http://xarigami.com/resources" title="#xarML('Related documentation on Smilies')#"><xar:mlstring>Xarigami Resources.</xar:mlstring></a>
-            </li>
+            <li><xar:mlstring>Smilies project page</xar:mlstring> <xar:mlstring>(there is no project page yet)</xar:mlstring></li>
+            <li><a href="http://xarigami.org/contrails/displayproject/xs"><xar:mlstring>Xarigami Smilies issue tracker</xar:mlstring></a></li>
           </ul>
           <p class="xar-sub">
             <strong>&nbsp;<xar:mlstring>Xarigami Smilies Module Overview</xar:mlstring></strong><br />&nbsp;<xar:mlstring>Revision</xar:mlstring> 1.1.0&#160; 2008-12-05
